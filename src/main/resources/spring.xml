@@ -26,9 +26,20 @@
 <!--          autowire="byType">-->
 <!--    </bean>-->
 
-<!--    <bean id="helloManager" class="my.demo.manager.xml.HelloworldManagerImpl">-->
+<!--    xml配置bean-->
+<!--    1.无参构造-->
+<!--    <bean id="helloManagerImpl" class="my.demo.manager.xml.HelloworldManagerImpl">-->
 <!--    </bean>-->
 
+<!--    2.静态方法-->
+<!--    <bean id="helloManagerImpl" class="my.demo.manager.xml.HelloworldManagerImplFacory" factory-method="getHelloworldManagerImplInstance">-->
+<!--    </bean>-->
 
+<!--    3.实例方法-->
+    <bean id="createHelloworldManagerImpl" class="my.demo.manager.xml.CreateHelloworldManagerImpl">
+    </bean>
+
+    <bean id="helloManagerImpl" factory-bean="createHelloworldManagerImpl" factory-method="getHelloworldManagerImplInstance">
+    </bean>
 
 </beans>
