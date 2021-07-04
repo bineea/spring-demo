@@ -8,6 +8,7 @@ import my.demo.manager.annotation.TestDependencyInjection;
 import my.demo.manager.factoryBean.TestBean;
 import my.demo.manager.importBean.Test2ImportBean;
 import my.demo.manager.test.Test2RegisterBean;
+import my.demo.manager.xml.HelloworldManagerImpl;
 import my.demo.manager.xml.MyselfManagerImpl;
 import my.demo.manager.xml.StartManagerImpl;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -30,12 +31,19 @@ public class ContentApplication {
 //        xmlApplicationContext.getBean(MyselfManagerImpl.class).toShow();
 //        xmlApplicationContext.getBean(MyselfManagerImpl.class).toShow();
 
+        //XML方式配置Bean
+//        ClassPathXmlApplicationContext xmlApplicationContext =
+//                new ClassPathXmlApplicationContext("classpath:spring.xml");
+//
+//        HelloworldManagerImpl helloManagerImpl = (HelloworldManagerImpl) xmlApplicationContext.getBean("helloManagerImpl");
+//        System.out.println(helloManagerImpl);
+
         //注解方式配置Bean
-        AnnotationConfigApplicationContext annoApplicationContext =
-                new AnnotationConfigApplicationContext(ApplyConfig.class);
+//        AnnotationConfigApplicationContext annoApplicationContext =
+//                new AnnotationConfigApplicationContext(ApplyConfig.class);
 
         //获取单例bean
-        annoApplicationContext.getBean(TestDependencyInjection.class).getFactoryBeanImpl();
+//        annoApplicationContext.getBean(TestDependencyInjection.class).getFactoryBeanImpl();
 
         //创建BeanDefinition，并配置属性
 //        AbstractBeanDefinition beanDefinition = BeanDefinitionBuilder.genericBeanDefinition().getBeanDefinition();
