@@ -6,7 +6,7 @@
 
     <groupId>my.demo</groupId>
     <artifactId>spring-demo</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <build>
@@ -22,6 +22,10 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>spring-xml-demo</module>
+        <module>spring-demo-bak</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
