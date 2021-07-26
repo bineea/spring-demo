@@ -43,4 +43,25 @@
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
 
+    <!--实例化bean的方式-->
+    <!--无参构造-->
+    <bean id="transferService" class="my.demo.service.TransferServiceImpl">
+        <property name="sampleTransferMapper" ref="sampleTransferMapper" />
+    </bean>
+    <!--有参构造-->
+    <bean id="transferManager" class="my.demo.manager.TransferManagerImpl">
+        <constructor-arg name="transferService" ref="transferService" />
+    </bean>
+    <!--静态方法-->
+    <bean id="helloworldManagerByStatic" class="my.demo.manager.HelloworldManagerFactory"
+          factory-method="initHelloworldManagerImpl">
+    </bean>
+    <!--实例方法-->
+    <bean id="createHelloworldManager" class="my.demo.manager.CreateHelloworldManager">
+    </bean>
+    <bean id="helloworldManagerByExample" factory-bean="createHelloworldManager" factory-method="getHelloworldManagerImplInstance">
+    </bean>
+
+
+
 </beans>
