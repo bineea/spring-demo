@@ -19,20 +19,20 @@
         <property name="value" value="mySelfValue"></property>
     </bean>
 
-<!--    <bean id="defaultStartManagerLocator" class="my.demo.manager.xml.DefaultStartManagerLocator">-->
+<!--    <bean id="defaultStartManagerLocator" class="my.DefaultStartManagerLocator">-->
 <!--    </bean>-->
 
-<!--    <bean id="startManager" class="my.demo.manager.xml.StartManagerImpl"-->
+<!--    <bean id="startManager" class="my.StartManagerImpl"-->
 <!--          autowire="byType">-->
 <!--    </bean>-->
 
 <!--    xml配置bean-->
 <!--    1.无参构造-->
-<!--    <bean id="helloManagerImpl" class="my.demo.manager.xml.HelloworldManagerImpl">-->
+<!--    <bean id="helloManagerImpl" class="my.HelloworldManagerImpl">-->
 <!--    </bean>-->
 
 <!--    2.静态方法-->
-<!--    <bean id="helloManagerImpl" class="my.demo.manager.xml.HelloworldManagerImplFacory" factory-method="getHelloworldManagerImplInstance">-->
+<!--    <bean id="helloManagerImpl" class="my.HelloworldManagerImplFacory" factory-method="getHelloworldManagerImplInstance">-->
 <!--    </bean>-->
 
 <!--    3.实例方法-->

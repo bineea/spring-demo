@@ -1,26 +1,5 @@
 package my.demo;
 
-import my.demo.config.ApplyConfig;
-import my.demo.manager.annotation.AnnotationDIManagerImpl;
-import my.demo.manager.annotation.EndManager;
-import my.demo.manager.annotation.EndManagerImpl;
-import my.demo.manager.annotation.TestDependencyInjection;
-import my.demo.manager.factoryBean.TestBean;
-import my.demo.manager.importBean.Test2ImportBean;
-import my.demo.manager.test.Test2RegisterBean;
-import my.demo.manager.xml.HelloworldManagerImpl;
-import my.demo.manager.xml.MyselfManagerImpl;
-import my.demo.manager.xml.StartManagerImpl;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.beans.factory.support.AbstractBeanDefinition;
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-import org.springframework.context.annotation.AnnotatedBeanDefinitionReader;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
-import org.springframework.context.annotation.Import;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 public class ContentApplication {
 
     public static void main(String[] args) {
