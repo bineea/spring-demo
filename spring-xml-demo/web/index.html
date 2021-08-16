@@ -76,12 +76,12 @@
                 }
 
                 $.ajax({
-                    url:'/transferServlet',
+                    url:'/demo/transferServlet',
                     type:'POST',    //GET
                     async:false,    //或false,是否异步
                     data:{
-                        fromCardNo:fromAccount.split(' ')[1],
-                        toCardNo:toAccount.split(' ')[1],
+                        fromAccountNo:fromAccount.split(' ')[1],
+                        toAccountNo:toAccount.split(' ')[1],
                         money:money
                     },
                     timeout:5000,    //超时时间
@@ -125,7 +125,7 @@
         <tr>
             <td align="right"><span>付款账户</span></td>
             <td align="center">
-                <input type="text" id="fromAccount" value="李大雷 6029621011000" disabled></input>
+                <input type="text" id="fromAccount" value="李大雷 6029621011002" disabled></input>
             </td>
         </tr>
         <tr>
