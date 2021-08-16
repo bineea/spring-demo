@@ -5,9 +5,15 @@ import my.demo.dao.entity.SampleTransfer;
 public interface TransferService {
 
     /**
-     * 处理转账操作
-     * @param source
-     * @param target
+     * 通过账号查询
+     * @param account
+     * @return
      */
-    void handleTransfer(SampleTransfer source, SampleTransfer target);
+    SampleTransfer findByAccount(String account);
+
+    /**
+     * 更新操作
+     * @param transfer
+     */
+    int updateTransfer(SampleTransfer transfer);
 }

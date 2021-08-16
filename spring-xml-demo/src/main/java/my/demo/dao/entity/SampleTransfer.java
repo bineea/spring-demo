@@ -13,6 +13,10 @@ public class SampleTransfer implements Serializable {
      */
     private Long id;
     /**
+     * 账号
+     */
+    private String account;
+    /**
      * 名称
      */
     private String name;
@@ -25,6 +29,7 @@ public class SampleTransfer implements Serializable {
     public String toString() {
         return "SampleTransfer{" +
                 "id=" + id +
+                ", account='" + account + '\'' +
                 ", name='" + name + '\'' +
                 ", total=" + total +
                 '}';
@@ -36,6 +41,14 @@ public class SampleTransfer implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getAccount() {
+        return account;
+    }
+
+    public void setAccount(String account) {
+        this.account = account;
     }
 
     public String getName() {

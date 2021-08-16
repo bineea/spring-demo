@@ -8,7 +8,7 @@ public interface SampleTransferMapper {
 
     List<SampleTransfer> findAll();
 
-    SampleTransfer findById(long id);
+    SampleTransfer findByAccount(String account);
 
     int updateTotalById(SampleTransfer sampleTransfer);
 }

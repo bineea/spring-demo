@@ -9,8 +9,8 @@
         select * from sample_transfer;
     </select>
 
-    <select id="findById" resultType="my.demo.dao.entity.SampleTransfer">
-        select * from sample_transfer where id = #{id};
+    <select id="findByAccount" resultType="my.demo.dao.entity.SampleTransfer">
+        select * from sample_transfer where account = #{account};
     </select>
 
     <update id="updateTotalById" parameterType="my.demo.dao.entity.SampleTransfer">
