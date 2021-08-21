@@ -3,7 +3,6 @@ package my.demo.servlet;
 import com.alibaba.fastjson.JSON;
 import my.demo.manager.TransferManager;
 import my.demo.pojo.Result;
-import my.demo.service.TransferService;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
