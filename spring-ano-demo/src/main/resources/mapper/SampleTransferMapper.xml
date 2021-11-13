@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="my.demo.dao.mapper.SampleTransferMapper">
+
+    <select id="findAll" resultType="my.demo.dao.entity.SampleTransfer">
+        select * from sample_transfer;
+    </select>
+
+    <select id="findByAccount" resultType="my.demo.dao.entity.SampleTransfer">
+        select * from sample_transfer where account = #{account};
+    </select>
+
+    <update id="updateTotalById" parameterType="my.demo.dao.entity.SampleTransfer">
+        update sample_transfer set total = #{total} where id = #{id};
+    </update>
+
+</mapper>

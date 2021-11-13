@@ -16,5 +16,8 @@
 备注：
 ## 如何快速复制一个mvn项目
 
-1. 修改文件
-2. 修改文件
+1. 文件目录执行复制操作，复制指定的module
+2. 重命名复制的module
+3. 删除“target”目录，删除“xxxx.iml”文件，只保留“src”目录和“pom.xml”文件
+4. 修改“pom.xml”文件，修改“<artifactId>”
+5. 操作导入module，重新生成“xxxx.iml”文件
