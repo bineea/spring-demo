@@ -26,7 +26,6 @@
     <modules>
         <module>spring-xml-demo</module>
         <module>spring-demo-bak</module>
-        <module>spring-test-demo</module>
     </modules>
 
     <properties>
