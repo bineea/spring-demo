@@ -16,5 +16,8 @@ public class MyDemoApplication {
 
         HelloworldManager helloworldManagerByExample = (HelloworldManager) xmlApplicationContext.getBean("helloworldManagerByExample");
         System.out.println(helloworldManagerByExample);
+
+        HelloworldManager helloworldManagerImpl = (HelloworldManager) xmlApplicationContext.getBean("helloworldServiceImpl");
+        System.out.println(helloworldManagerImpl.sayHelloworld());
     }
 }
