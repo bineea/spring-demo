@@ -1,5 +1,8 @@
 package my.demo.manager;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class HelloworldManagerImpl implements HelloworldManager {
 
     @Override
