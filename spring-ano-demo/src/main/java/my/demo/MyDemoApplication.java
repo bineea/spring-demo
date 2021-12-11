@@ -24,7 +24,7 @@ public class MyDemoApplication {
 //        HelloworldManager helloworldManagerImpl = (HelloworldManager) applicationContext.getBean("helloworldManagerImpl");
 //        System.out.println(helloworldManagerImpl.sayHelloworld());
 
-        CreateHelloworldManager createHelloworldManager = (CreateHelloworldManager) applicationContext.getBean("createHelloworldManager");
+        CreateHelloworldManager createHelloworldManager = (CreateHelloworldManager) applicationContext.getBean("getCreateHelloworldManager");
         System.out.println(createHelloworldManager.getHelloworldManagerImplInstance());
     }
 }
