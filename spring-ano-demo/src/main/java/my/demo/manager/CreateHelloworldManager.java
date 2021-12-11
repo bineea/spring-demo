@@ -2,7 +2,7 @@ package my.demo.manager;
 
 public class CreateHelloworldManager {
 
-    private HelloworldManagerImpl getHelloworldManagerImplInstance() {
+    public HelloworldManagerImpl getHelloworldManagerImplInstance() {
         return new HelloworldManagerImpl();
     }
 }

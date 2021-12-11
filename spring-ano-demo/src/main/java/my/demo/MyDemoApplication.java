@@ -2,7 +2,9 @@ package my.demo;
 
 import my.demo.config.AppConfig;
 import my.demo.dao.mapper.SampleTransferMapper;
+import my.demo.manager.CreateHelloworldManager;
 import my.demo.manager.HelloworldManager;
+import my.demo.manager.HelloworldManagerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -19,7 +21,10 @@ public class MyDemoApplication {
 //        HelloworldManager helloworldManagerByExample = (HelloworldManager) applicationContext.getBean("helloworldManagerByExample");
 //        System.out.println(helloworldManagerByExample);
 
-        HelloworldManager helloworldManagerImpl = (HelloworldManager) applicationContext.getBean("helloworldManagerImpl");
-        System.out.println(helloworldManagerImpl.sayHelloworld());
+//        HelloworldManager helloworldManagerImpl = (HelloworldManager) applicationContext.getBean("helloworldManagerImpl");
+//        System.out.println(helloworldManagerImpl.sayHelloworld());
+
+        CreateHelloworldManager createHelloworldManager = (CreateHelloworldManager) applicationContext.getBean("createHelloworldManager");
+        System.out.println(createHelloworldManager.getHelloworldManagerImplInstance());
     }
 }
