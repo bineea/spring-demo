@@ -15,7 +15,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class AppConfig {
 
     @Bean
-    public CreateHelloworldManager getCreateHelloworldManager() {
+    public CreateHelloworldManager getCreateHelloworldManager(AppConfig appConfig) {
+        System.out.println(appConfig.toString());
         return new CreateHelloworldManager();
     }
 }
