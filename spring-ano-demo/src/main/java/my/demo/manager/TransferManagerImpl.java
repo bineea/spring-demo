@@ -2,9 +2,13 @@ package my.demo.manager;
 
 import my.demo.dao.entity.SampleTransfer;
 import my.demo.service.TransferService;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 
+@Component
 public class TransferManagerImpl implements TransferManager {
 
     private TransferService transferService;
@@ -13,6 +17,7 @@ public class TransferManagerImpl implements TransferManager {
         this.transferService = transferService;
     }
 
+    @Transactional
     @Override
     public void handleTransfer(String fromAccount, String toAccount, BigDecimal money) throws Exception {
         SampleTransfer fromTransfer = transferService.findByAccount(fromAccount);

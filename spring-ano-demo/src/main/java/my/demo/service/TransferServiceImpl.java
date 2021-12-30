@@ -2,9 +2,11 @@ package my.demo.service;
 
 import my.demo.dao.entity.SampleTransfer;
 import my.demo.dao.mapper.SampleTransferMapper;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+@Service
 public class TransferServiceImpl  implements TransferService{
 
     private SampleTransferMapper sampleTransferMapper;
