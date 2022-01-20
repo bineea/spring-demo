@@ -11,12 +11,17 @@
             http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
     ">
 
+    <!--扫描-->
+    <context:component-scan base-package="my.demo" />
+
     <!--只能在一类文件里加载一个 properties文件，加载多个会导致冲突-->
     <context:property-placeholder location="classpath:database.properties"/>
 
 <!--    &lt;!&ndash; spring的属性加载器，加载所有properties文件中的属性，供所有springcontext-*.xml文件共同使用 &ndash;&gt;-->
 <!--    <bean id="configPropertyConfigurer"-->
 <!--          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+<!--        &lt;!&ndash;是否忽略不可解析的Placeholder，如果配置多个PropertyPlaceholderConfigurer，则必须设置为true&ndash;&gt;-->
+<!--        <property name="ignoreUnresolvablePlaceholders" value="true" />-->
 <!--        <property name="locations">-->
 <!--            <list>-->
 <!--                &lt;!&ndash;这样写可以引入多个properties文件&ndash;&gt;-->
@@ -49,8 +54,5 @@
 
     <!--开启AOP配置-->
     <aop:aspectj-autoproxy proxy-target-class="true" expose-proxy="true" />
-
-    <!--扫描-->
-    <context:component-scan base-package="my.demo" />
 
 </beans>
