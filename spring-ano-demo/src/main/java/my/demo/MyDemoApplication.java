@@ -12,8 +12,8 @@ public class MyDemoApplication {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
-        SampleTransferMapper sampleTransferMapper = (SampleTransferMapper) applicationContext.getBean("sampleTransferMapper");
-        System.out.println(sampleTransferMapper.findAll());
+//        SampleTransferMapper sampleTransferMapper = (SampleTransferMapper) applicationContext.getBean("sampleTransferMapper");
+//        System.out.println(sampleTransferMapper.findAll());
 //
 //        HelloworldManager helloworldManagerByStatic = (HelloworldManager) applicationContext.getBean("helloworldManagerByStatic");
 //        System.out.println(helloworldManagerByStatic);

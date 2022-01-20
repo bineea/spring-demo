@@ -2,6 +2,7 @@ package my.demo.manager;
 
 import my.demo.dao.entity.SampleTransfer;
 import my.demo.service.TransferService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,11 +12,8 @@ import java.math.BigDecimal;
 @Component
 public class TransferManagerImpl implements TransferManager {
 
+    @Autowired
     private TransferService transferService;
-
-    public TransferManagerImpl (TransferService transferService) {
-        this.transferService = transferService;
-    }
 
     @Transactional
     @Override
