@@ -25,6 +25,7 @@
     </build>
     <modules>
         <module>spring-ano-demo</module>
+        <module>spring-ano-xml-demo</module>
         <module>spring-xml-demo</module>
         <module>spring-demo-bak</module>
     </modules>
