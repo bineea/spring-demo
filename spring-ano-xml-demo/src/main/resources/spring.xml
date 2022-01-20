@@ -46,42 +46,11 @@
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
 
-    <!--实例化bean的方式-->
-    <!--无参构造-->
-    <bean id="transferService" class="my.demo.service.TransferServiceImpl">
-        <property name="sampleTransferMapper" ref="sampleTransferMapper" />
-    </bean>
-    <!--有参构造-->
-    <bean id="transferManager" class="my.demo.manager.TransferManagerImpl">
-        <constructor-arg name="transferService" ref="transferService" />
-    </bean>
-    <!--静态方法-->
-    <bean id="helloworldManagerByStatic" class="my.demo.manager.HelloworldManagerFactory"
-          factory-method="initHelloworldManagerImpl">
-    </bean>
-    <!--实例方法-->
-    <bean id="createHelloworldManager" class="my.demo.manager.CreateHelloworldManager">
-    </bean>
-    <bean id="helloworldManagerByExample" factory-bean="createHelloworldManager" factory-method="getHelloworldManagerImplInstance">
-    </bean>
 
     <!--开启AOP配置-->
     <aop:aspectj-autoproxy proxy-target-class="true" expose-proxy="true" />
 
-    <bean id="helloworldServiceImpl" class="my.demo.manager.HelloworldManagerImpl">
-    </bean>
-
-    <!--配置AOP-->
-    <bean id="logAspecj" class="my.demo.aspectj.LogAspectj">
-    </bean>
-
-    <aop:config>
-        <aop:aspect ref="logAspecj">
-            <aop:pointcut id="helloworldPointcut" expression="execution(* my.demo.manager.HelloworldManagerImpl.*(..))" />
-            <aop:before method="beforeExcute" pointcut-ref="helloworldPointcut" />
-            <aop:after method="afterExcute" pointcut-ref="helloworldPointcut" />
-            <aop:around method="aroundExcute" pointcut-ref="helloworldPointcut" />
-        </aop:aspect>
-    </aop:config>
+    <!--扫描-->
+    <context:component-scan base-package="my.demo" />
 
 </beans>
