@@ -2,16 +2,17 @@ package my.demo.manager;
 
 import my.demo.dao.entity.SampleTransfer;
 import my.demo.service.TransferService;
+import org.aspectj.lang.annotation.Around;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+@Service
 public class TransferManagerImpl implements TransferManager {
 
+    @Autowired
     private TransferService transferService;
-
-    public TransferManagerImpl (TransferService transferService) {
-        this.transferService = transferService;
-    }
 
     @Override
     public void handleTransfer(String fromAccount, String toAccount, BigDecimal money) throws Exception {

@@ -12,7 +12,7 @@
     ">
 
     <!--扫描-->
-    <context:component-scan base-package="my.demo" />
+    <context:component-scan base-package="my.demo.*" />
 
     <!--只能在一类文件里加载一个 properties文件，加载多个会导致冲突-->
     <context:property-placeholder location="classpath:database.properties"/>

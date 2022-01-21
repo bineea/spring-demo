@@ -2,20 +2,16 @@ package my.demo.service;
 
 import my.demo.dao.entity.SampleTransfer;
 import my.demo.dao.mapper.SampleTransferMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+@Service
 public class TransferServiceImpl  implements TransferService{
 
+    @Autowired
     private SampleTransferMapper sampleTransferMapper;
-
-    public SampleTransferMapper getSampleTransferMapper() {
-        return sampleTransferMapper;
-    }
-
-    public void setSampleTransferMapper(SampleTransferMapper sampleTransferMapper) {
-        this.sampleTransferMapper = sampleTransferMapper;
-    }
 
     @Override
     public SampleTransfer findByAccount(String account) {

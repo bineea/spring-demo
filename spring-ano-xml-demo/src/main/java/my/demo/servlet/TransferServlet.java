@@ -53,6 +53,6 @@ public class TransferServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         WebApplicationContext webApplicationContext = WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
-        transferManager = (TransferManager) webApplicationContext.getBean("transferManager");
+        transferManager = (TransferManager) webApplicationContext.getBean("transferManagerImpl");
     }
 }
