@@ -18,7 +18,7 @@
     <context:component-scan base-package="my.demo.*" />
 
     <!--只能在一类文件里加载一个 properties文件，加载多个会导致冲突-->
-    <context:property-placeholder location="classpath:database.properties"/>
+    <context:property-placeholder location="classpath:service.properties"/>
 
 <!--    &lt;!&ndash; spring的属性加载器，加载所有properties文件中的属性，供所有springcontext-*.xml文件共同使用 &ndash;&gt;-->
 <!--    <bean id="configPropertyConfigurer"-->
@@ -29,7 +29,7 @@
 <!--            <list>-->
 <!--                &lt;!&ndash;这样写可以引入多个properties文件&ndash;&gt;-->
 <!--                &lt;!&ndash; <value>/WEB-INF/configInfo.properties</value> &ndash;&gt;-->
-<!--                <value>classpath:database.properties</value>-->
+<!--                <value>classpath:service.properties</value>-->
 <!--            </list>-->
 <!--        </property>-->
 <!--    </bean>-->
