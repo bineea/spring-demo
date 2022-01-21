@@ -15,4 +15,17 @@
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
+
+  <!--测试DispatcherServlet是否导致spring重复启动-->
+  <!--spring启动DispatcherServlet -->
+<!--  <servlet>-->
+<!--    <servlet-name>sprint-ano-xml-demo-web</servlet-name>-->
+<!--    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>-->
+<!--    <init-param>-->
+<!--      <param-name>contextConfigLocation</param-name>-->
+<!--      <param-value>classpath:spring.xml</param-value>-->
+<!--    </init-param>-->
+<!--    <load-on-startup>1</load-on-startup>-->
+<!--  </servlet>-->
+
 </web-app>
