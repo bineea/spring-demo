@@ -2,9 +2,9 @@ package my.demo.manager;
 
 import my.demo.dao.entity.SampleTransfer;
 import my.demo.service.TransferService;
-import org.aspectj.lang.annotation.Around;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 
@@ -14,6 +14,7 @@ public class TransferManagerImpl implements TransferManager {
     @Autowired
     private TransferService transferService;
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public void handleTransfer(String fromAccount, String toAccount, BigDecimal money) throws Exception {
         SampleTransfer fromTransfer = transferService.findByAccount(fromAccount);
@@ -28,5 +29,6 @@ public class TransferManagerImpl implements TransferManager {
         toTransfer.setTotal(toTransfer.getTotal().add(money));
         transferService.updateTransfer(fromTransfer);
         transferService.updateTransfer(toTransfer);
+        throw new Exception("test~~~");
     }
 }
