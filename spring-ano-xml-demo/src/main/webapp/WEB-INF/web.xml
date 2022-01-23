@@ -6,24 +6,30 @@
   <display-name>Archetype Created Web Application</display-name>
 
 
-  <!--配置Spring ioc容器的配置文件-->
+  <!--配置Spring的配置文件-->
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:spring.xml</param-value>
   </context-param>
-  <!--使用监听器启动Spring的IOC容器-->
+  <!--ContextLoaderListener触发Spring启动-->
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
-  <!--测试DispatcherServlet导致spring重复启动-->
-  <!--spring启动DispatcherServlet -->
+<!--  DispatcherServlet触发Spring启动-->
+<!--  1.配置contextConfigLocation，即Spring配置文件-->
+<!--  2.配置contextAttribute，即ContextLoaderListener创建的WebApplicationContext对象-->
+<!--  ContextLoaderListener和DispatcherServlet不用重复配置，将导致Spring重复启动，如果需要配置，则需要在DispatcherServlet中配置contextAttribute-->
 <!--  <servlet>-->
 <!--    <servlet-name>sprint-ano-xml-demo-web</servlet-name>-->
 <!--    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>-->
 <!--    <init-param>-->
 <!--      <param-name>contextConfigLocation</param-name>-->
 <!--      <param-value>classpath:spring-web.xml</param-value>-->
+<!--    </init-param>-->
+<!--    <init-param>-->
+<!--      <param-name>contextAttribute</param-name>-->
+<!--      <param-value>org.springframework.web.context.WebApplicationContext.ROOT</param-value>-->
 <!--    </init-param>-->
 <!--    <load-on-startup>1</load-on-startup>-->
 <!--  </servlet>-->
