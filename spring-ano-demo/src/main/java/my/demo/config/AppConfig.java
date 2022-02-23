@@ -10,6 +10,7 @@ import org.springframework.beans.factory.config.PropertiesFactoryBean;
 import org.springframework.context.annotation.*;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
@@ -85,5 +86,12 @@ public class AppConfig {
                 new PathMatchingResourcePatternResolver()
                         .getResources("classpath:mapper/*.xml"));
         return sqlSessionFactory;
+    }
+
+    @Bean(name = "transactionManager")
+    public DataSourceTransactionManager transactionManager(DataSource dataSource) {
+        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
+        dataSourceTransactionManager.setDataSource(dataSource);
+        return dataSourceTransactionManager;
     }
 }
